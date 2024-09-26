@@ -1,0 +1,67 @@
+body {
+    font-family: 'Roboto';font-size: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+.allroots {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.alltypes {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.allInversions {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
+.selectButton {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 50px;
+    border-radius: 15px;
+    opacity: 1.0;
+}
+.selectButton:hover {
+    background-color: rgb(145, 144, 144);
+}
+
+
+.typeButton {
+    background-color: coral;
+}
+
+.rootButton {
+    background-color: rgb(132, 195, 185);
+}
+
+.inversionButton {
+    background-color: rgb(126, 163, 231);
+}
+
+
+
+
+
+
+.buttonBox {
+    padding: 5px;
+}

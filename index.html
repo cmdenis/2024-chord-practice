@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chord Practice</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Chord Practice</h1>
@@ -14,5 +18,303 @@
       are many parameters you can modify. Given those parameters, you will be
       dynamically quizzed on different musical chords.
     </p>
+
+    <!-- Current chord to play -->
+    <div style="display: flex; justify-content: center; gap: 10px">
+      <div
+        style="
+          background-color: rgb(205, 150, 210);
+          display: flex;
+          justify-content: center;
+          width: 60px;
+          height: 60px;
+          border-radius: 30px;
+        ">
+        <h3 id="currentTime">1</h3>
+      </div>
+      <div
+        style="
+          background-color: rgb(79, 144, 185);
+          display: flex;
+          justify-content: center;
+          width: 200px;
+          height: 80px;
+          border-radius: 15px;
+        ">
+        <h1 id="currentChordText">E m7</h1>
+      </div>
+
+      <div
+        style="
+          background-color: rgb(220, 105, 105);
+          display: flex;
+          justify-content: center;
+          width: 100px;
+          height: 60px;
+          border-radius: 15px;
+        ">
+        <h3 id="nextChordText">C# maj 7</h3>
+      </div>
+    </div>
+
+    <div>
+      <h2>Roots</h2>
+
+      <div class="allroots">
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('C', this)">
+            <p id="rootButton">C</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('C♯', this)">
+            <p id="rootButton">C♯</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('D♭', this)">
+            <p id="rootButton">D♭</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('D', this)">
+            <p id="rootButton">D</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('D♯', this)">
+            <p id="rootButton">D♯</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('E♭', this)">
+            <p id="rootButton">E♭</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('E', this)">
+            <p id="rootButton">E</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('F♭', this)">
+            <p id="rootButton">F♭</p>
+          </div>
+        </div>
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('E♯', this)">
+            <p id="rootButton">E♯</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('F', this)">
+            <p id="rootButton">F</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('F♯', this)">
+            <p id="rootButton">F♯</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('G♭', this)">
+            <p id="rootButton">G♭</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('G', this)">
+            <p id="rootButton">G</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('G♯', this)">
+            <p id="rootButton">G♯</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('A♭', this)">
+            <p id="rootButton">A♭</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('A', this)">
+            <p id="rootButton">A</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('A♯', this)">
+            <p id="rootButton">A♯</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('B♭', this)">
+            <p id="rootButton">B♭</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('B', this)">
+            <p id="rootButton">B</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton rootButton"
+            onclick="changeRootList('B♯', this)">
+            <p id="rootButton">B♯</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Type</h2>
+
+      <div class="alltypes">
+        <div class="buttonBox">
+          <div
+            class="selectButton typeButton"
+            onclick="changeRootList('', this)">
+            <p id="rootButton"></p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton typeButton"
+            onclick="changeRootList('m', this)">
+            <p id="rootButton">m</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton typeButton"
+            onclick="changeRootList('⁷', this)">
+            <p id="rootButton">⁷</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton typeButton"
+            onclick="changeRootList('m⁷', this)">
+            <p id="rootButton">m⁷</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton typeButton"
+            onclick="changeRootList('mᵐᵃʲ ⁷', this)">
+            <p id="rootButton">mᵐᵃʲ ⁷</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div
+            class="selectButton typeButton"
+            onclick="changeRootList('6', this)">
+            <p id="rootButton">6</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  
+    <div>
+      <h2>Inversion (not working)</h2>
+
+      <div class="allInversions">
+        <div class="buttonBox">
+          <div class="selectButton inversionButton">
+            <p id="rootButton">1</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div class="selectButton inversionButton">
+            <p id="rootButton">2</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div class="selectButton inversionButton">
+            <p id="rootButton">3</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div class="selectButton inversionButton">
+            <p id="rootButton">4</p>
+          </div>
+        </div>
+
+        <div class="buttonBox">
+          <div class="selectButton inversionButton">
+            <p id="rootButton">5</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
   </body>
+  <footer>
+    <script src="app.js"></script>
+  </footer>
 </html>

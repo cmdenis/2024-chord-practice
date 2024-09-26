@@ -49,7 +49,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 // Time between chords
-var switchTime = 500 //ms
+var switchTime = 800 //ms
 
 // Define the root notes
 var roots = ["C", "C♯", "D♭", "D", "D♯", "E♭", "E", "F♭", "E♯", "F", "F♯", "G♭", "G", "G♯", "A♭", "A", "A♯", "B♭", "B", "B♯"]

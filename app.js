@@ -10,23 +10,22 @@ function removeItemAll(arr, value) {
     return arr;
 }
 
-function changeRootList(name, x){
+function changeTypeList(name, x){
     //var x = document.getElementById(buttonName)
     //console.log(x)
     if (x.style.opacity == 0.5) {
         x.style.opacity = 1;
         types = removeItemAll(types, name)
         types.push(name)
-        console.log(types)
         
       } else {
         types = removeItemAll(types, name)
         x.style.opacity = 0.5;
-        console.log(types)
       }
+      console.log("Type list:", types)
 }
 
-function changeTypeList(name, x){
+function changeRootList(name, x){
     //var x = document.getElementById(buttonName)
     //console.log(x)
     if (x.style.opacity == 0.5) {
@@ -54,7 +53,7 @@ var switchTime = 800 //ms
 // Define the root notes
 var roots = ["C", "C♯", "D♭", "D", "D♯", "E♭", "E", "F♭", "E♯", "F", "F♯", "G♭", "G", "G♯", "A♭", "A", "A♯", "B♭", "B", "B♯"]
 // Define the type of chords
-var types = ["", "⁷", "m⁷", "mᵐᵃʲ ⁷", "6"]
+var types = ["", "m", "⁷", "m⁷", "mᵐᵃʲ ⁷", "6"]
 
 console.log(roots)
 

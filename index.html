@@ -229,7 +229,7 @@
         <div class="buttonBox">
           <div
             class="selectButton typeButton"
-            onclick="changeRootList('', this)">
+            onclick="changeTypeList('', this)">
             <p id="rootButton"></p>
           </div>
         </div>
@@ -237,7 +237,7 @@
         <div class="buttonBox">
           <div
             class="selectButton typeButton"
-            onclick="changeRootList('m', this)">
+            onclick="changeTypeList('m', this)">
             <p id="rootButton">m</p>
           </div>
         </div>
@@ -245,7 +245,7 @@
         <div class="buttonBox">
           <div
             class="selectButton typeButton"
-            onclick="changeRootList('⁷', this)">
+            onclick="changeTypeList('⁷', this)">
             <p id="rootButton">⁷</p>
           </div>
         </div>
@@ -253,7 +253,7 @@
         <div class="buttonBox">
           <div
             class="selectButton typeButton"
-            onclick="changeRootList('m⁷', this)">
+            onclick="changeTypeList('m⁷', this)">
             <p id="rootButton">m⁷</p>
           </div>
         </div>
@@ -261,7 +261,7 @@
         <div class="buttonBox">
           <div
             class="selectButton typeButton"
-            onclick="changeRootList('mᵐᵃʲ ⁷', this)">
+            onclick="changeTypeList('mᵐᵃʲ ⁷', this)">
             <p id="rootButton">mᵐᵃʲ ⁷</p>
           </div>
         </div>
@@ -269,11 +269,23 @@
         <div class="buttonBox">
           <div
             class="selectButton typeButton"
-            onclick="changeRootList('6', this)">
+            onclick="changeTypeList('6', this)">
             <p id="rootButton">6</p>
           </div>
         </div>
       </div>
+    </div>
+
+    <div>
+      <h2 id="beatDisplay">BPM 120</h2>
+      <input
+        type="range"
+        min="10"
+        value="120"
+        max="300"
+        class="slider"
+        oninput="switchTime = 1000*60/Number(this.value); const beatDisplay = document.getElementById('beatDisplay'); beatDisplay.innerHTML = 'BPM ' + this.value;"
+        step="1" />
     </div>
 
     <!--  

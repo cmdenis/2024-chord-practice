@@ -53,7 +53,7 @@ var switchTime = 800 //ms
 // Define the root notes
 var roots = ["C", "C♯", "D♭", "D", "D♯", "E♭", "E", "F♭", "E♯", "F", "F♯", "G♭", "G", "G♯", "A♭", "A", "A♯", "B♭", "B", "B♯"]
 // Define the type of chords
-var types = ["", "m", "⁷", "m⁷", "mᵐᵃʲ ⁷", "6"]
+var types = ["", "m", "⁷", "m⁷", "maj⁷", "mᵐᵃʲ ⁷", "6"]
 
 console.log(roots)
 
